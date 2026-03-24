@@ -1,0 +1,39 @@
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <span> {{courseName}} </span>
+            </td>
+            <td>
+                <strong> {{cityName}} </strong>
+            </td>
+            <td>
+                <p class="{{className}}"> This is a paragraph. </p>
+            </td>
+            <td>
+                <input type="{{inputType}}" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button (click)="showWelcomeMessage()">Show Welcome Message</button>
+            </td>
+            <td>
+                <select (change)="onStateChanged()">
+                    <option value="">Arusha</option>
+                    <option value="">Moshi</option>
+                    <option value="">Zanzibar</option>
+                    <option value="">Mara</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" [(ngModel)]="courseName" />
+            </td>
+            <td>
+                <button (click)="changeCourseName('Python           ')">Change Course Python</button>    
+            </td>
+        </tr>
+    </tbody>
+</table>
