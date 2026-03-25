@@ -1,1 +1,65 @@
-<router-outlet></router-outlet>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 Sidebar Navbar</title>
+  <style>
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      width: 250px;
+      min-height: 100vh;
+    }
+
+    .sidebar .nav-link {
+      color: #adb5bd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+      background-color: #495057;
+      color: #fff;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<div class="d-flex">
+  <!-- Sidebar -->
+  <nav class="sidebar bg-dark p-3 vh-100 text-white" style="width: 200px;">
+    <h4 class="text-white mb-4">My Panel</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a routerLink="/databinding" class="nav-link active">Data Binding</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signal" class="nav-link">Signal</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/variables" class="nav-link">Variables</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Reports</a>
+      </li>
+      <li class="nav-item mt-3">
+        <a href="#" class="nav-link text-danger">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
